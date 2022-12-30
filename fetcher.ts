@@ -12,12 +12,13 @@ addreses.forEach((address) => {
   const res = axios.get(URL);
   res.then((d) => {
     const data = JSON.stringify(d.data);
-    fs.writeFile(`${address}-data.json`, data, (e) => {
+    fs.writeFile(`./json/${address}-data.json`, data, (e) => {
       console.log(e);
     });
-    console.log(data);
+    console.log("done");
   });
 });
+console.log("update");
 
 // const data = (() => {
 //   const res = axios.get(URL);

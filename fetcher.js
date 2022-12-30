@@ -13,17 +13,18 @@ addreses.forEach((address) => {
     const res = axios_1.default.get(URL);
     res.then((d) => {
         const data = JSON.stringify(d.data);
-        fs_1.default.writeFile(`${address}-data.json`, data, (e) => {
+        fs_1.default.writeFile(`./json/${address}-data.json`, data, (e) => {
             console.log(e);
         });
-        console.log(data);
+        console.log("done");
     });
 });
+console.log("update");
 // const data = (() => {
 //   const res = axios.get(URL);
 //   res.then((d) => {
 //     const data = JSON.stringify(d.data);
-//     fs.writeFile("data.json", data, (e) => {
+//     fs.writeFile("data1.json", data, (e) => {
 //       console.log(e);
 //     });
 //     console.log(data);
